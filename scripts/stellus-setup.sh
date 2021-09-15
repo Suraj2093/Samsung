@@ -20,7 +20,6 @@ while [ $N -lt 2 ]
 do
    echo "curl -X GET --header 'Accept: application/json' -k $url" | adddate >> samsung.log
    curl -X GET --header 'Accept: application/json' -k $url >> samsung.json 2>&1
-   flag=$?; if [ $flag != 0 ] ; then echo  "ERROR ! Cluster Deployment Failed " | adddate >> samsung.log; rm samsung.json; exit $flag;  fi
    grep clusterState samsung.json | adddate >> samsung.log
    if grep -o ACTIVE samsung.json
    then
