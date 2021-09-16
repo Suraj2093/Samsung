@@ -33,11 +33,4 @@ do
    fi
 done
 
-if [ $N -eq 2 ]
-then
-    echo "Cluster is deployed successfully!" | adddate >> samsung.log
-else
-    echo "Deployment is taking too long..." | adddate >> samsung.log
-    echo "Cluster deployment failed!" | adddate >> samsung.log
-
 echo "Done" | adddate >> samsung.log
