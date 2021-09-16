@@ -12,7 +12,7 @@ url="https://$ip/api/serverInfo"
 echo "Cluster IP: $ip" | adddate >> samsung.log
 echo "Cluster URL: $url" | adddate >> samsung.log
 
-sleep 60
+sleep 300
 
 N=0
 echo "Fetching details from api server" | adddate >> samsung.log
